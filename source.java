@@ -12,7 +12,7 @@ public class source {
 		Scanner input = new Scanner(System.in);
 		System.out.printf("Enter a trinket name: \n");
 		userName = input.nextLine();
-		while (userName != "-1\n") {
+		while (!userName.equals("-1")) {
 			System.out.printf("Enter a trinket value: \n");
 			userValue = input.nextDouble();
 			System.out.printf("Enter a trinket weight: \n");
