@@ -3,3 +3,5 @@ Length of meeting: 1 hour, from 18:00 to 19:00
 Group met to discuss initial thoughts on project. Name "D&D Chest" was coined. Trinket class was created. Responsibilities going forward were discussed.
 
 10/12/2021
+Length of meeting: 2 hours, for 7:22pm to 9:22pm
+Group met first hour to discuss mid progress report and finalize individual assignments. Second hour was dedicated to working more on core features
