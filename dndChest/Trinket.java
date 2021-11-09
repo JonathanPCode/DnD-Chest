@@ -1,4 +1,4 @@
-package dndChest;
+package application;
 
 public class Trinket {
 	private String name;
