@@ -13,6 +13,8 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Ellipse;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 
 public class Main extends Application {
@@ -33,8 +35,10 @@ public class Main extends Application {
 		Button addContainer = new Button("New Container");
 		Button addTrinket = new Button("New Trinket");
 		
-		Ellipse logo = new Ellipse(10, 30);
-		
+		//Ellipse logo = new Ellipse(10, 30);
+		ImageView logo = new ImageView("file:Images/dndappiconclear.png");
+		logo.setFitWidth(30);
+		logo.setPreserveRatio(true);
 		
 		mainPane.setTop(header);
 		
