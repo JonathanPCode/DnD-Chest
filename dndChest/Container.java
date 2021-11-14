@@ -30,7 +30,7 @@ public class Container {
 	}
 	
 	public void addTrinket(Trinket t) {
-		if (containedWeight + t.getWeight() < maxWeight) {
+		if (containedWeight + t.getWeight() <= maxWeight) {
 			containedValue += t.getValue();
 			containedWeight += t.getWeight();
 			trinketList.add(t);
@@ -71,6 +71,14 @@ public class Container {
 	
 	public double getContainedWeight() {
 		return containedWeight;
+	}
+	
+	public double getWeightRatio() {
+		return containedWeight / maxWeight;
+	}
+	
+	public ArrayList<Trinket> getList() {
+		return trinketList;
 	}
 	
 	public String toString() {

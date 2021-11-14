@@ -45,6 +45,7 @@ public class Trinket {
 	}
 	
 	public String toString() {
-		return "Name: " + name + "\nValue: " + value + "\nWeight: " + weight;
+		//return "Name: " + name + "\nValue: " + value + "\nWeight: " + weight;
+		return name;
 	}
 }
