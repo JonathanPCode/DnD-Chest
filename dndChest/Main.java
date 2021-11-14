@@ -36,7 +36,7 @@ public class Main extends Application {
 		header.spacingProperty().bind(mainScene.widthProperty().subtract(50).divide(5));
 		
 		
-		Image logo = new Image("file:src/application/dndappiconclear.png");
+		Image logo = new Image("file:dndappiconclear.png");
 		ImageView setUpLogo = new ImageView(logo);
 		
 		setUpLogo.setFitWidth(400);
