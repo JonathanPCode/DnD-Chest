@@ -2,6 +2,7 @@ package application;
 
 public class Trinket {
 	private String name;
+	private String description;
 	private double value;
 	private double weight;
 	
@@ -9,11 +10,13 @@ public class Trinket {
 		name = "Trinket";
 		value = 0;
 		weight = 0;
+		description = "";
 	}
-	public Trinket(String n, double v, double w) {
+	public Trinket(String n, String d, double v, double w) {
 		name = n;
 		value = v;
 		weight = w;
+		description = d;
 	}
 	
 	public double getValue() {
@@ -25,6 +28,9 @@ public class Trinket {
 	public String getName() {
 		return name;
 	}
+	public String getDesc() {
+		return description;
+	}
 	public void setValue(double value) {
 		this.value = value;
 	}
@@ -33,6 +39,9 @@ public class Trinket {
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	public void setDesc(String desc) {
+		this.description = desc;
 	}
 	
 	public String toString() {
