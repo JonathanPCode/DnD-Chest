@@ -14,9 +14,19 @@ public class Container {
 		maxWeight = Double.POSITIVE_INFINITY;
 	}
 	
+	public Container(String n) {
+		name = n;
+		maxWeight = Double.POSITIVE_INFINITY;
+	}
+	
 	public Container(String n, double w) {
 		name = n;
-		maxWeight = w;
+		if (w == 0) {
+			maxWeight = Double.POSITIVE_INFINITY;
+		}
+		else {
+			maxWeight = w;
+		}
 	}
 	
 	public void addTrinket(Trinket t) {
@@ -64,11 +74,14 @@ public class Container {
 	}
 	
 	public String toString() {
+		/*
 		int listLength = trinketList.size();
 		String catString = "";
 		for (int i = 0; i < listLength; i++) {
 			catString = catString + "\n" + trinketList.get(i);
 		}
 		return catString;
+		*/
+		return name;
 	}
 }
