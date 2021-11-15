@@ -7,3 +7,9 @@ Group met to discuss initial thoughts on project. Name "D&D Chest" was coined. T
 Minute recorder: Zalen Ingram
 Length of meeting: 2 hours, for 7:22pm to 9:22pm
 Group met first hour to discuss mid progress report and finalize individual assignments. Second hour was dedicated to working more on core features
+
+
+11/8/2021
+Minute recorder: Jaylen Williams
+length of meeting: 1 hour and 15 minutes, from 6:10 to 7:25
+Group met to assign  final roles for the project and divied up the work accordingly.
