@@ -1,4 +1,3 @@
-package application;
 
 import java.util.ArrayList;
 import javafx.application.Application;
@@ -25,10 +24,15 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		VBox newCharacter = new VBox();
+		newCharacter.setId("scene");
+		newCharacter.getStylesheets().add("file:src/stuff.css");
+		
 		newCharacter.setAlignment(Pos.CENTER);
 		newCharacter.setSpacing(10);
 		Scene setUp = new Scene(newCharacter, 900, 700);
 		BorderPane mainPane = new BorderPane();
+		mainPane.setId("scene");
+		mainPane.getStylesheets().add("file:src/stuff.css");
 		Scene mainScene = new Scene(mainPane, 900, 700);
 		
 		HBox header = new HBox();
@@ -36,7 +40,7 @@ public class Main extends Application {
 		header.spacingProperty().bind(mainScene.widthProperty().subtract(50).divide(5));
 		
 		
-		Image logo = new Image("file:dndappiconclear.png");
+		Image logo = new Image("file:Images/dndappiconclear.png");
 		ImageView setUpLogo = new ImageView(logo);
 		
 		setUpLogo.setFitWidth(400);
@@ -96,13 +100,13 @@ public class Main extends Application {
 		characterInfo.getChildren().addAll(displayName, displayClass, userGold);
 		header.getChildren().addAll(characterInfo, buttons, mainLogo);
 		header.setAlignment(Pos.CENTER);
-		header.setStyle("-fx-border-color:BLACK");
+		header.setStyle("-fx-border-color:#A9A9A9");
 		
 		Label weightRatio = new Label("Container is 0.00% full.");
 		Label containedGold = new Label("Container has 0.00 gold.");
 		
-		VBox containersTab = new VBox();
-        containersTab.setStyle("-fx-border-color:BLACK");
+		VBox containersTab = new VBox(20);
+        containersTab.setStyle("-fx-border-color:#A9A9A9");
 		ComboBox containerSelect = new ComboBox();
         Label containerLabel = new Label("Containers:", containerSelect);
         containerLabel.setContentDisplay(ContentDisplay.BOTTOM);
@@ -131,6 +135,8 @@ public class Main extends Application {
 	    cWeightLabel.setContentDisplay(ContentDisplay.RIGHT);
 	    VBox containersVBox = new VBox(10, containersBigText, containerNameSelect, containerMaxWeightSelect, cNameLabel, cWeightLabel,conButtons);
 	    containersVBox.setAlignment(Pos.CENTER);
+	    containersVBox.setId("scene");
+	    containersVBox.getStylesheets().add("file:src/stuff.css");
 	
 	    // Changes scene to containersVBox
 	    Scene newContainer = new Scene(containersVBox, 900, 700);
@@ -189,10 +195,14 @@ public class Main extends Application {
         VBox trinketVBox = new VBox(10, trinketBigText, trinketNameSelect, trinketWeightSelect, trinketGoldSelect, trinketDescSelect, 
         tNameLabel, tWeightLabel, tGoldLabel, tDescLabel, trinketButtons);
         trinketVBox.setAlignment(Pos.CENTER);
+        trinketVBox.setId("scene");
+        trinketVBox.getStylesheets().add("file:src/stuff.css");
+
         
         // Initialize ListView early
         ListView trinketListView = new ListView();
-        trinketListView.setStyle("-fx-border-color:BLACK");
+        trinketListView.setStyle("-fx-border-color:#A9A9A9");
+        trinketListView.getStylesheets().add("file:src/stuff.css");
         
         // Changes scene to newTrinket VBox
         Scene newTrinket = new Scene(trinketVBox, 900, 700);
@@ -271,6 +281,8 @@ public class Main extends Application {
         Label trinketWeightView = new Label("Weight: ");
         Label trinketGoldView = new Label("Value: ");
         Label trinketDescView = new Label("Description: ");
+        
+        
         trinketNameView.setWrapText(true);
         trinketDescView.setWrapText(true);
         VBox trinketView = new VBox(20, trinketNameView, trinketWeightView, trinketGoldView, trinketDescView);
@@ -278,7 +290,7 @@ public class Main extends Application {
         trinketView.setPadding(new Insets(5));
         trinketView.setMinWidth(185);
         trinketView.setMaxWidth(185);
-        trinketView.setStyle("-fx-border-color:BLACK");
+        trinketView.setStyle("-fx-border-color:#A9A9A9");
         
         
         trinketListView.getSelectionModel().selectedItemProperty().addListener(e ->{
@@ -289,6 +301,8 @@ public class Main extends Application {
         	trinketDescView.setText("Description: "+ temp.getDesc());
         });
         
+        
+        primaryStage.setTitle("D&D Chest");
 		primaryStage.setScene(setUp);
 		primaryStage.show();
 	}
