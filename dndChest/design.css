@@ -33,7 +33,6 @@
 }
 
 .list-view{
-    -fx-text-fill: #F2F3F5;
     -fx-font: bold 12px 'serif';
     -fx-background-image: url(file:Images/dndappiconbackground.png);
     -fx-background-size:900 700;
