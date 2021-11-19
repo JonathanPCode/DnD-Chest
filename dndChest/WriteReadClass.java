@@ -2,19 +2,10 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
-//import java.awt.Desktop;
-//import java.util.logging.Level;
-//import java.util.logging.Logger;
-import javafx.stage.FileChooser;
-
-//import com.sun.javafx.logging.Logger;
 
 public class WriteReadClass {
-	private BufferedWriter Writebw;
 	private BufferedReader Readbw;
-	private File readFile;
 	
 	
 	public WriteReadClass (File file) {
