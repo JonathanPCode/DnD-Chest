@@ -1,4 +1,3 @@
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -36,7 +35,7 @@ public class Main extends Application {
 		// Main pane for setup screen
 		VBox newCharacter = new VBox();
 		newCharacter.setId("scene");
-		newCharacter.getStylesheets().add("file:src/stuff.css");
+		newCharacter.getStylesheets().add("file:src/design.css");
 		newCharacter.setAlignment(Pos.CENTER);
 		newCharacter.setSpacing(10);
 		// Scene to display newCharacter VBox
@@ -45,7 +44,7 @@ public class Main extends Application {
 		// Primary pane that displays container and trinket info, plus utilities
 		BorderPane mainPane = new BorderPane();
 		mainPane.setId("scene");
-		mainPane.getStylesheets().add("file:src/stuff.css");
+		mainPane.getStylesheets().add("file:src/design.css");
 		// Scene to display mainPane BorderPane
 		Scene mainScene = new Scene(mainPane, 900, 700);
 		
@@ -85,14 +84,7 @@ public class Main extends Application {
 		fileChosen.setContentDisplay(ContentDisplay.RIGHT);
 		// Button confirms character setup and continues to mainScene
 		Button submitCharacter = new Button("Continue");
-		/*
-		submitCharacter.setOnAction(e -> {
-			displayName.setText("Name: " + inputName.getText());
-			displayClass.setText("Class: "+ inputClass.getText());
-			
-			primaryStage.setScene(mainScene);
-		});
-		*/
+		
 		// Show which file selected and save
 		openFileButton.setOnAction(e -> {
 			FileChooser fileChooser = new FileChooser();
@@ -178,7 +170,7 @@ public class Main extends Application {
 	    VBox containersVBox = new VBox(10, containersBigText, containerNameSelect, containerMaxWeightSelect, cNameLabel, cWeightLabel,conButtons);
 	    containersVBox.setAlignment(Pos.CENTER);
 	    containersVBox.setId("scene");
-	    containersVBox.getStylesheets().add("file:src/stuff.css");
+	    containersVBox.getStylesheets().add("file:src/design.css");
 	    
 	    // New container creation scene
 	    Scene newContainer = new Scene(containersVBox, 900, 700);
@@ -246,12 +238,12 @@ public class Main extends Application {
         tNameLabel, tWeightLabel, tGoldLabel, tDescLabel, trinketButtons);
         trinketVBox.setAlignment(Pos.CENTER);
         trinketVBox.setId("scene");
-        trinketVBox.getStylesheets().add("file:src/stuff.css");
+        trinketVBox.getStylesheets().add("file:src/design.css");
         
         // Implement trinket ListView on mainPane
         ListView<Trinket> trinketListView = new ListView<Trinket>();
         trinketListView.setStyle("-fx-border-color:#A9A9A9");
-        trinketListView.getStylesheets().add("file:src/stuff.css");
+        trinketListView.getStylesheets().add("file:src/design.css");
         trinketListView.setMinHeight(100);
         mainPane.setCenter(trinketListView);
         
