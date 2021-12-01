@@ -1,3 +1,5 @@
+package application;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -35,7 +37,7 @@ public class Main extends Application {
 		// Main pane for setup screen
 		VBox newCharacter = new VBox();
 		newCharacter.setId("scene");
-		newCharacter.getStylesheets().add("file:src/design.css");
+		newCharacter.getStylesheets().add("file:design.css");
 		newCharacter.setAlignment(Pos.CENTER);
 		newCharacter.setSpacing(10);
 		// Scene to display newCharacter VBox
@@ -44,7 +46,7 @@ public class Main extends Application {
 		// Primary pane that displays container and trinket info, plus utilities
 		BorderPane mainPane = new BorderPane();
 		mainPane.setId("scene");
-		mainPane.getStylesheets().add("file:src/design.css");
+		mainPane.getStylesheets().add("file:design.css");
 		// Scene to display mainPane BorderPane
 		Scene mainScene = new Scene(mainPane, 900, 700);
 		
@@ -170,7 +172,7 @@ public class Main extends Application {
 	    VBox containersVBox = new VBox(10, containersBigText, containerNameSelect, containerMaxWeightSelect, cNameLabel, cWeightLabel,conButtons);
 	    containersVBox.setAlignment(Pos.CENTER);
 	    containersVBox.setId("scene");
-	    containersVBox.getStylesheets().add("file:src/design.css");
+	    containersVBox.getStylesheets().add("file:design.css");
 	    
 	    // New container creation scene
 	    Scene newContainer = new Scene(containersVBox, 900, 700);
@@ -238,12 +240,12 @@ public class Main extends Application {
         tNameLabel, tWeightLabel, tGoldLabel, tDescLabel, trinketButtons);
         trinketVBox.setAlignment(Pos.CENTER);
         trinketVBox.setId("scene");
-        trinketVBox.getStylesheets().add("file:src/design.css");
+        trinketVBox.getStylesheets().add("file:design.css");
         
         // Implement trinket ListView on mainPane
         ListView<Trinket> trinketListView = new ListView<Trinket>();
         trinketListView.setStyle("-fx-border-color:#A9A9A9");
-        trinketListView.getStylesheets().add("file:src/design.css");
+        trinketListView.getStylesheets().add("file:design.css");
         trinketListView.setMinHeight(100);
         mainPane.setCenter(trinketListView);
         
@@ -523,7 +525,6 @@ public class Main extends Application {
 				displayName.setText("Name: " + inputName.getText());
 				displayClass.setText("Class: " + inputClass.getText());
 			}
-			
 			primaryStage.setScene(mainScene);
 		});
         
